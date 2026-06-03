@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <path fill="none" stroke="#2f7bff" stroke-width="4" stroke-linecap="round">
+    <animate attributeName="d" dur="2s" repeatCount="indefinite" 
+             values="M 2 16 C 10 4, 22 28, 30 16;
+                     M 2 16 C 10 28, 22 4, 30 16;
+                     M 2 16 C 10 4, 22 28, 30 16" />
+  </path>
+</svg>

@@ -1,0 +1,81 @@
+{
+  "name": "@subitbhoi/wave-background",
+  "version": "0.1.0",
+  "description": "Responsive, interactive React canvas wave background component.",
+  "type": "module",
+  "author": "Subit Bhoi",
+  "license": "MIT",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "style": "./dist/style.css",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subitbhoi/wave-background.git"
+  },
+  "homepage": "https://subitbhoi.github.io/wave-background/",
+  "bugs": {
+    "url": "https://github.com/subitbhoi/wave-background/issues"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "test": "npm run test:smoke && npm run test:unit",
+    "test:smoke": "node scripts/smoke-test.mjs",
+    "test:unit": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck && npm run build:lib && npm run build:types && npm run build:styles",
+    "build:lib": "vite build",
+    "build:types": "tsc -p tsconfig.build.json",
+    "build:preview": "vite build --mode preview",
+    "build:styles": "node scripts/copy-styles.mjs",
+    "preview": "vite preview --host 127.0.0.1 --outDir dist-preview",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0 <20.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.0.4",
+    "jsdom": "^29.1.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12",
+    "vitest": "^4.1.8"
+  },
+  "keywords": [
+    "react",
+    "wave",
+    "background",
+    "animation",
+    "canvas",
+    "typescript",
+    "ui-component",
+    "react-component"
+  ]
+}

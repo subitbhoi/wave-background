@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wave Background</title>
+    <meta
+      name="description"
+      content="A responsive, interactive React canvas wave background component."
+    />
+    <meta
+      name="theme-color"
+      content="#fbfdff"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#030712"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="icon" href="./assets/icon.svg" />
+    <script>
+      (function () {
+        var theme = "light";
+        try {
+          var storedTheme = localStorage.getItem(
+            "wave-background-preview-theme",
+          );
+          if (storedTheme === "dark" || storedTheme === "light") {
+            theme = storedTheme;
+          } else {
+            theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+          }
+        } catch (e) {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.backgroundColor =
+          theme === "dark" ? "#030712" : "#fbfdff";
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/preview/main.tsx"></script>
+  </body>
+</html>

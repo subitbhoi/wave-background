@@ -1,0 +1,27 @@
+.wave-background {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  contain: layout paint size style;
+  display: block;
+  inset: 0;
+  max-width: none;
+  pointer-events: none;
+  touch-action: none;
+  transform: translate3d(0, 0, 0);
+  user-select: none;
+  will-change: transform;
+}
+
+.wave-background--fixed {
+  height: 100vh;
+  height: 100dvh;
+  position: fixed;
+  width: 100vw;
+  z-index: -1;
+}
+
+.wave-background--absolute {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
