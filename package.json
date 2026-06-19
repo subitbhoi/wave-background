@@ -77,5 +77,8 @@
     "typescript",
     "ui-component",
     "react-component"
-  ]
+  ],
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
 }

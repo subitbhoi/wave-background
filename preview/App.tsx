@@ -1,4 +1,5 @@
 import { memo, useCallback, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { WaveBackground, type WaveRenderQuality } from "../src";
 import "../src/WaveBackground.css";
 import {
@@ -158,6 +159,8 @@ export default function App() {
         onThemeChange={setTheme}
         quality={settings.quality}
       />
+
+      <Analytics />
     </main>
   );
 }
